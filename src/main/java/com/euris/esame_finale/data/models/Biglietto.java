@@ -1,7 +1,6 @@
 package com.euris.esame_finale.data.models;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -21,4 +20,10 @@ public class Biglietto {
 
     @OneToOne(mappedBy = "biglietto")
     private Spettatore spettatore;
+
+    @Column(name = "posizione")
+    private int posizione;
+
+    @Column(name = "prezzo")
+    private double prezzo;
 }
