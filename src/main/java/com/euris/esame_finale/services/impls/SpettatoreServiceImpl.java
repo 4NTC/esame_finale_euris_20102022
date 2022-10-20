@@ -183,7 +183,7 @@ public class SpettatoreServiceImpl implements SpettatoreService {
 
     @Override
     public Integer getEtaSpettatore(Long idSpettatore) {
-        Integer eta = 0;
+        int eta = 0;
         Optional<Spettatore> optionalSpettatore = spettatoreRepository.findById(idSpettatore);
         if (optionalSpettatore.isPresent()) {
             Spettatore spettatore = optionalSpettatore.get();
