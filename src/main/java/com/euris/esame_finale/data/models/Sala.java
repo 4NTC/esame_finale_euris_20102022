@@ -1,5 +1,7 @@
 package com.euris.esame_finale.data.models;
 
+import com.euris.esame_finale.data.archetypes.Model;
+import com.euris.esame_finale.data.dto.models.SalaDto;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,8 +13,8 @@ import java.util.List;
 @Setter
 @Builder
 @Entity
-@Table(name = "salaCinematografica")
-public class SalaCinematografica {
+@Table(name = "sala")
+public class Sala implements Model {
 
     @Id
     @Column(name = "id")
@@ -20,7 +22,7 @@ public class SalaCinematografica {
     private Long id;
 
     @Column(name = "numero_posti")
-    private int posti;
+    private Integer posti;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "film_id", referencedColumnName = "id")
@@ -32,4 +34,14 @@ public class SalaCinematografica {
     @ManyToOne
     @JoinColumn(name = "cinema_id", nullable = false)
     private Cinema cinema;
+
+    @Override
+    public SalaDto toDto() {
+        return SalaDto.builder()
+                .id(id)
+                .posti(posti)
+                .film(film)
+                .idCinema(cinema.getId())
+                .build();
+    }
 }

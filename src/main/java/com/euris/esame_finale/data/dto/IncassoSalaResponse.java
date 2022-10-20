@@ -7,8 +7,8 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class IncassoResponse {
+public class IncassoSalaResponse {
 
-    private Long idCinema;
+    private Long idSala;
     private double incasso;
 }

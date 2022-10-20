@@ -1,5 +1,8 @@
 package com.euris.esame_finale.data.models;
 
+import com.euris.esame_finale.data.archetypes.Dto;
+import com.euris.esame_finale.data.archetypes.Model;
+import com.euris.esame_finale.data.dto.models.BigliettoDto;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,7 +14,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "biglietto")
-public class Biglietto {
+public class Biglietto implements Dto {
 
     @Id
     @Column(name = "id")
@@ -22,8 +25,18 @@ public class Biglietto {
     private Spettatore spettatore;
 
     @Column(name = "posizione")
-    private int posizione;
+    private Integer posizione;
 
     @Column(name = "prezzo")
-    private double prezzo;
+    private Double prezzo;
+
+    @Override
+    public BigliettoDto toModel() {
+        return BigliettoDto.builder()
+                .id(id)
+                .idSpettatore(spettatore.getId())
+                .posizione(posizione)
+                .prezzo(prezzo)
+                .build();
+    }
 }

@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface SpettatoreService {
 
-    ResponseDto<SpettatoreDto> insertCinema(SpettatoreDto spettatoreDto);
-    ResponseDto<SpettatoreDto> updateCinema(SpettatoreDto spettatoreDto);
+    ResponseDto<SpettatoreDto> insertSpettatore(SpettatoreDto spettatoreDto);
+    ResponseDto<SpettatoreDto> updateSpettatore(SpettatoreDto spettatoreDto);
     ResponseDto<SpettatoreDto> removeById(Long idSpettatore);
     ResponseDto<List<SpettatoreDto>> getAll();
     ResponseDto<SpettatoreDto> getById(Long idSpettatore);

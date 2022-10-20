@@ -1,8 +1,9 @@
 package com.euris.esame_finale.data.models;
 
+import com.euris.esame_finale.data.archetypes.Dto;
+import com.euris.esame_finale.data.archetypes.Model;
+import com.euris.esame_finale.data.dto.models.SpettatoreDto;
 import lombok.*;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 @Builder
 @Entity
 @Table(name = "spettatore")
-public class Spettatore {
+public class Spettatore implements Model {
 
     @Id
     @Column(name = "id")
@@ -35,6 +36,17 @@ public class Spettatore {
     private Biglietto biglietto;
 
     @ManyToOne
-    @JoinColumn(name = "salaCinematografica_id", nullable = false)
-    private SalaCinematografica sala;
+    @JoinColumn(name = "sala_id", nullable = false)
+    private Sala sala;
+
+    @Override
+    public SpettatoreDto toDto() {
+        return SpettatoreDto.builder()
+                .id(id)
+                .nome(nome)
+                .cognome(cognome)
+                .dataNascita(dataNascita)
+                .idBiglietto(biglietto.getId())
+                .build();
+    }
 }

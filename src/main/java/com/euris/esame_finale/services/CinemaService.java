@@ -1,6 +1,6 @@
 package com.euris.esame_finale.services;
 
-import com.euris.esame_finale.data.dto.IncassoResponse;
+import com.euris.esame_finale.data.dto.IncassoCinemaResponse;
 import com.euris.esame_finale.data.dto.ResponseDto;
 import com.euris.esame_finale.data.dto.models.CinemaDto;
 
@@ -14,5 +14,5 @@ public interface CinemaService {
     ResponseDto<List<CinemaDto>> getAll();
     ResponseDto<CinemaDto> getById(Long idCinema);
 
-    IncassoResponse calcolaIncasso(Long idCinema);
+    IncassoCinemaResponse calcolaIncasso(Long idCinema);
 }

@@ -1,6 +1,9 @@
 package com.euris.esame_finale.data.models;
 
-import com.euris.esame_finale.utils.Genere;
+import com.euris.esame_finale.data.archetypes.Dto;
+import com.euris.esame_finale.data.archetypes.Model;
+import com.euris.esame_finale.data.dto.models.FilmDto;
+import com.euris.esame_finale.utils.GenereFilm;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,7 +15,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "film")
-public class Film {
+public class Film implements Model {
 
     @Id
     @Column(name = "id")
@@ -29,16 +32,29 @@ public class Film {
     private String produttore;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "genere")
-    private Genere genere;
+    @Column(name = "genereFilm")
+    private GenereFilm genereFilm;
 
     @Column(name = "etaMinima")
-    private int etaMinima;
+    private Integer etaMinima;
 
     @Column(name = "durata")
-    private int durata;
+    private Integer durata;
 
     @OneToOne(mappedBy = "film")
-    private SalaCinematografica sala;
+    private Sala sala;
 
+    @Override
+    public FilmDto toDto() {
+        return FilmDto.builder()
+                .id(id)
+                .titolo(titolo)
+                .autore(autore)
+                .produttore(produttore)
+                .genereFilm(genereFilm)
+                .etaMinima(etaMinima)
+                .durata(durata)
+                .idSala(sala.getId())
+                .build();
+    }
 }

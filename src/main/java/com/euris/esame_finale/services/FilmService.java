@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface FilmService {
 
-    ResponseDto<FilmDto> insertCinema(FilmDto filmDto);
-    ResponseDto<FilmDto> updateCinema(FilmDto filmDto);
+    ResponseDto<FilmDto> insertFilm(FilmDto filmDto);
+    ResponseDto<FilmDto> updateFilm(FilmDto filmDto);
     ResponseDto<FilmDto> removeById(Long idFilm);
     ResponseDto<List<FilmDto>> getAll();
     ResponseDto<FilmDto> getById(Long idFilm);
