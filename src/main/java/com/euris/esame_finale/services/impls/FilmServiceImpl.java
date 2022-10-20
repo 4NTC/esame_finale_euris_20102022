@@ -27,7 +27,7 @@ public class FilmServiceImpl implements FilmService {
 
 
     @Override
-    public ResponseDto<FilmDto> insertFilm(FilmDto filmDto) {
+    public ResponseDto<FilmDto> insert(FilmDto filmDto) {
         ResponseDto<FilmDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
 
@@ -58,7 +58,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public ResponseDto<FilmDto> updateFilm(FilmDto filmDto) {
+    public ResponseDto<FilmDto> update(FilmDto filmDto) {
         ResponseDto<FilmDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
 
@@ -85,7 +85,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public ResponseDto<FilmDto> removeById(Long idFilm) {
+    public ResponseDto<FilmDto> deleteById(Long idFilm) {
         ResponseDto<FilmDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.DELETE);
 

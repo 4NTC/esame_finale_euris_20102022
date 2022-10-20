@@ -20,12 +20,12 @@ public class CinemaController {
 
     @PostMapping
     public ResponseDto<CinemaDto> insert() {
-        return cinemaService.insertCinema();
+        return cinemaService.insert();
     }
 
     @DeleteMapping("/{id}")
     public ResponseDto<CinemaDto> deleteById(@PathVariable Long idCinema) {
-        return cinemaService.removeById(idCinema);
+        return cinemaService.deleteById(idCinema);
     }
 
     @GetMapping

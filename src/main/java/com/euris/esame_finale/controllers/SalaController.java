@@ -23,7 +23,7 @@ public class SalaController {
 
     @PostMapping
     public ResponseDto<SalaDto> insert(@RequestBody SalaDto salaDto) {
-        return salaService.insertSala(salaDto);
+        return salaService.insert(salaDto);
     }
 
     @PostMapping("/{id}")
@@ -43,12 +43,12 @@ public class SalaController {
 
     @PutMapping
     public ResponseDto<SalaDto> update(@RequestBody SalaDto salaDto) {
-        return salaService.updateSala(salaDto);
+        return salaService.update(salaDto);
     }
 
     @DeleteMapping("/{id}")
     public ResponseDto<SalaDto> deleteById(@PathVariable Long idSala) {
-        return salaService.removeById(idSala);
+        return salaService.deleteById(idSala);
     }
 
     @GetMapping

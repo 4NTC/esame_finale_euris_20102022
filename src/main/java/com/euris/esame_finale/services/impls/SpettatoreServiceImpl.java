@@ -32,7 +32,7 @@ public class SpettatoreServiceImpl implements SpettatoreService {
     }
 
     @Override
-    public ResponseDto<SpettatoreDto> insertSpettatore(SpettatoreDto spettatoreDto) {
+    public ResponseDto<SpettatoreDto> insert(SpettatoreDto spettatoreDto) {
 
         ResponseDto<SpettatoreDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
@@ -71,7 +71,7 @@ public class SpettatoreServiceImpl implements SpettatoreService {
     }
 
     @Override
-    public ResponseDto<SpettatoreDto> updateSpettatore(SpettatoreDto spettatoreDto) {
+    public ResponseDto<SpettatoreDto> update(SpettatoreDto spettatoreDto) {
         ResponseDto<SpettatoreDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.PUT);
         Optional<Spettatore> optionalSpettatore = spettatoreRepository.findById(spettatoreDto.getIdBiglietto());
@@ -119,7 +119,7 @@ public class SpettatoreServiceImpl implements SpettatoreService {
     }
 
     @Override
-    public ResponseDto<SpettatoreDto> removeById(Long idSpettatore) {
+    public ResponseDto<SpettatoreDto> deleteById(Long idSpettatore) {
         ResponseDto<SpettatoreDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.DELETE);
 

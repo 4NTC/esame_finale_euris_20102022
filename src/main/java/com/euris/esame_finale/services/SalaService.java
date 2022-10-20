@@ -12,9 +12,9 @@ import java.util.List;
 
 public interface SalaService {
 
-    ResponseDto<SalaDto> insertSala(SalaDto salaDto);
-    ResponseDto<SalaDto> updateSala(SalaDto salaDto);
-    ResponseDto<SalaDto> removeById(Long idSala);
+    ResponseDto<SalaDto> insert(SalaDto salaDto);
+    ResponseDto<SalaDto> update(SalaDto salaDto);
+    ResponseDto<SalaDto> deleteById(Long idSala);
     ResponseDto<List<SalaDto>> getAll();
     ResponseDto<SalaDto> getById(Long idSala);
 

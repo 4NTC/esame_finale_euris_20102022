@@ -19,17 +19,17 @@ public class SpettatoreController {
 
     @PostMapping
     ResponseDto<SpettatoreDto> insert(@RequestBody SpettatoreDto spettatoreDto) {
-        return spettatoreService.insertSpettatore(spettatoreDto);
+        return spettatoreService.insert(spettatoreDto);
     }
 
     @PutMapping
     ResponseDto<SpettatoreDto> update(@RequestBody SpettatoreDto spettatoreDto) {
-        return spettatoreService.updateSpettatore(spettatoreDto);
+        return spettatoreService.update(spettatoreDto);
     }
 
     @DeleteMapping
     ResponseDto<SpettatoreDto> deleteById(@PathVariable Long idSpettatore) {
-        return spettatoreService.removeById(idSpettatore);
+        return spettatoreService.deleteById(idSpettatore);
     }
 
     @GetMapping

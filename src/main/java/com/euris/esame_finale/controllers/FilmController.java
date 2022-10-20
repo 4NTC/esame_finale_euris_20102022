@@ -19,17 +19,17 @@ public class FilmController {
 
     @PostMapping
     public ResponseDto<FilmDto> insert(@RequestBody FilmDto filmDto) {
-        return filmService.insertFilm(filmDto);
+        return filmService.insert(filmDto);
     }
 
     @PutMapping
     public ResponseDto<FilmDto> update(@RequestBody FilmDto filmDto) {
-        return filmService.updateFilm(filmDto);
+        return filmService.update(filmDto);
     }
 
     @DeleteMapping("/{id}")
     public ResponseDto<FilmDto> deleteById(@PathVariable Long idFilm) {
-        return filmService.removeById(idFilm);
+        return filmService.deleteById(idFilm);
     }
 
     @GetMapping

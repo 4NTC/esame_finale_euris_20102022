@@ -19,12 +19,12 @@ public class BigliettoController {
 
     @PostMapping
     public ResponseDto<BigliettoDto> insert(@RequestBody BigliettoDto bigliettoDto) {
-        return bigliettoService.insertBiglietto(bigliettoDto);
+        return bigliettoService.insert(bigliettoDto);
     }
 
     @PutMapping
     public ResponseDto<BigliettoDto> update(@RequestBody BigliettoDto bigliettoDto) {
-        return bigliettoService.updateBiglietto(bigliettoDto);
+        return bigliettoService.update(bigliettoDto);
     }
 
     @PutMapping("/riduzionePrezzo/{id}")
@@ -34,7 +34,7 @@ public class BigliettoController {
 
     @DeleteMapping("/{id}")
     public ResponseDto<BigliettoDto> deleteById(@PathVariable Long idBiglietto) {
-        return bigliettoService.removeById(idBiglietto);
+        return bigliettoService.deleteById(idBiglietto);
     }
 
     @GetMapping

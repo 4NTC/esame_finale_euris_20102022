@@ -8,10 +8,10 @@ import java.util.List;
 
 public interface CinemaService {
 
-    ResponseDto<CinemaDto> insertCinema();
+    ResponseDto<CinemaDto> insert();
     // Cinema non contiene campi da aggiornare
     // ResponseDto<CinemaDto> updateCinema(CinemaDto cinemaDto);
-    ResponseDto<CinemaDto> removeById(Long idCinema);
+    ResponseDto<CinemaDto> deleteById(Long idCinema);
     ResponseDto<List<CinemaDto>> getAll();
     ResponseDto<CinemaDto> getById(Long idCinema);
 

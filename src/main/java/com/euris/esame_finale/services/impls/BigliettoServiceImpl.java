@@ -29,7 +29,7 @@ public class BigliettoServiceImpl implements BigliettoService {
     }
 
     @Override
-    public ResponseDto<BigliettoDto> insertBiglietto(BigliettoDto bigliettoDto) {
+    public ResponseDto<BigliettoDto> insert(BigliettoDto bigliettoDto) {
         ResponseDto<BigliettoDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
 
@@ -62,7 +62,7 @@ public class BigliettoServiceImpl implements BigliettoService {
     }
 
     @Override
-    public ResponseDto<BigliettoDto> updateBiglietto(BigliettoDto bigliettoDto) {
+    public ResponseDto<BigliettoDto> update(BigliettoDto bigliettoDto) {
 
         ResponseDto<BigliettoDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.PUT);
@@ -96,7 +96,7 @@ public class BigliettoServiceImpl implements BigliettoService {
     }
 
     @Override
-    public ResponseDto<BigliettoDto> removeById(Long idBiglietto) {
+    public ResponseDto<BigliettoDto> deleteById(Long idBiglietto) {
         ResponseDto<BigliettoDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.DELETE);
 

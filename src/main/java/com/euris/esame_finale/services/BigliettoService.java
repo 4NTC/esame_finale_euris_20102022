@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface BigliettoService {
 
-    ResponseDto<BigliettoDto> insertBiglietto(BigliettoDto bigliettoDto);
-    ResponseDto<BigliettoDto> updateBiglietto(BigliettoDto bigliettoDto);
-    ResponseDto<BigliettoDto> removeById(Long idBiglietto);
+    ResponseDto<BigliettoDto> insert(BigliettoDto bigliettoDto);
+    ResponseDto<BigliettoDto> update(BigliettoDto bigliettoDto);
+    ResponseDto<BigliettoDto> deleteById(Long idBiglietto);
     ResponseDto<List<BigliettoDto>> getAll();
     ResponseDto<BigliettoDto> getById(Long idBiglietto);
 

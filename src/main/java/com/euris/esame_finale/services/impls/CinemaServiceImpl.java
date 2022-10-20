@@ -28,7 +28,7 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Override
-    public ResponseDto<CinemaDto> insertCinema() {
+    public ResponseDto<CinemaDto> insert() {
         ResponseDto<CinemaDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
         Cinema cinema = Cinema.builder().sale(new ArrayList<>()).build();
@@ -42,7 +42,7 @@ public class CinemaServiceImpl implements CinemaService {
 
 
     @Override
-    public ResponseDto<CinemaDto> removeById(Long idCinema) {
+    public ResponseDto<CinemaDto> deleteById(Long idCinema) {
         ResponseDto<CinemaDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.DELETE);
 

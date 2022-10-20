@@ -39,7 +39,7 @@ public class SalaServiceImpl implements SalaService {
 
 
     @Override
-    public ResponseDto<SalaDto> insertSala(SalaDto salaDto) {
+    public ResponseDto<SalaDto> insert(SalaDto salaDto) {
         ResponseDto<SalaDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
 
@@ -78,7 +78,7 @@ public class SalaServiceImpl implements SalaService {
     }
 
     @Override
-    public ResponseDto<SalaDto> updateSala(SalaDto salaDto) {
+    public ResponseDto<SalaDto> update(SalaDto salaDto) {
         ResponseDto<SalaDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.POST);
 
@@ -123,7 +123,7 @@ public class SalaServiceImpl implements SalaService {
     }
 
     @Override
-    public ResponseDto<SalaDto> removeById(Long idSala) {
+    public ResponseDto<SalaDto> deleteById(Long idSala) {
         ResponseDto<SalaDto> response = new ResponseDto<>();
         response.setHttpRequest(HttpRequestType.DELETE);
 
