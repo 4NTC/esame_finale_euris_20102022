@@ -2,7 +2,7 @@ package com.euris.esame_finale.utils;
 
 public enum GenereFilm {
 
-    HORRO,
+    HORROR,
     FANTASY,
     COMMEDY
 }

@@ -28,7 +28,7 @@ public class Cinema implements Model {
     public CinemaDto toDto() {
         return CinemaDto.builder()
                 .id(id)
-                .sale(sale)
+                .sale(sale.stream().map(Sala::toDto).toList())
                 .build();
     }
 }

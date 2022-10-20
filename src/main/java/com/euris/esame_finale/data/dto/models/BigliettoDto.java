@@ -1,5 +1,6 @@
 package com.euris.esame_finale.data.dto.models;
 
+import com.euris.esame_finale.data.archetypes.Dto;
 import com.euris.esame_finale.data.archetypes.Model;
 import com.euris.esame_finale.data.models.Biglietto;
 import com.euris.esame_finale.data.models.Spettatore;
@@ -10,7 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class BigliettoDto implements Model {
+public class BigliettoDto implements Dto {
 
     private Long id;
     private Long idSpettatore;
@@ -18,7 +19,7 @@ public class BigliettoDto implements Model {
     private Double prezzo;
 
     @Override
-    public Biglietto toDto() {
+    public Biglietto toModel() {
         Spettatore spettatore = Spettatore.builder().id(idSpettatore).build();
         return Biglietto.builder()
                 .id(id)

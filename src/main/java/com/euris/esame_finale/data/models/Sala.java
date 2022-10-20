@@ -40,7 +40,7 @@ public class Sala implements Model {
         return SalaDto.builder()
                 .id(id)
                 .posti(posti)
-                .film(film)
+                .idFilm(film.getId())
                 .idCinema(cinema.getId())
                 .build();
     }

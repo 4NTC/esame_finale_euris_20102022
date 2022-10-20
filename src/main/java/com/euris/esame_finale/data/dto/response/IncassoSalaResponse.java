@@ -1,4 +1,4 @@
-package com.euris.esame_finale.data.dto;
+package com.euris.esame_finale.data.dto.response;
 
 import lombok.*;
 
@@ -7,8 +7,8 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class IncassoCinemaResponse {
+public class IncassoSalaResponse {
 
-    private Long idCinema;
+    private Long idSala;
     private double incasso;
 }

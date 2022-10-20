@@ -1,4 +1,4 @@
-package com.euris.esame_finale.data.dto;
+package com.euris.esame_finale.data.dto.response;
 
 import com.euris.esame_finale.utils.HttpRequestType;
 import com.euris.esame_finale.utils.HttpResponseType;

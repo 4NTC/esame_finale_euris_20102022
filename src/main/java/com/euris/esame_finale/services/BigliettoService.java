@@ -1,6 +1,6 @@
 package com.euris.esame_finale.services;
 
-import com.euris.esame_finale.data.dto.ResponseDto;
+import com.euris.esame_finale.data.dto.response.ResponseDto;
 import com.euris.esame_finale.data.dto.models.BigliettoDto;
 
 import java.util.List;

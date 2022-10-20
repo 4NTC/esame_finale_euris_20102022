@@ -47,6 +47,7 @@ public class Spettatore implements Model {
                 .cognome(cognome)
                 .dataNascita(dataNascita)
                 .idBiglietto(biglietto.getId())
+                .idSala(sala.getId())
                 .build();
     }
 }

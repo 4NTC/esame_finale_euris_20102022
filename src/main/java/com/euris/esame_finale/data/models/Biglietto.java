@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "biglietto")
-public class Biglietto implements Dto {
+public class Biglietto implements Model {
 
     @Id
     @Column(name = "id")
@@ -31,7 +31,7 @@ public class Biglietto implements Dto {
     private Double prezzo;
 
     @Override
-    public BigliettoDto toModel() {
+    public BigliettoDto toDto() {
         return BigliettoDto.builder()
                 .id(id)
                 .idSpettatore(spettatore.getId())

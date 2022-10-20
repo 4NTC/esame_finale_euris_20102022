@@ -2,7 +2,6 @@ package com.euris.esame_finale.data.dto.models;
 
 import com.euris.esame_finale.data.archetypes.Dto;
 import com.euris.esame_finale.data.models.Cinema;
-import com.euris.esame_finale.data.models.Sala;
 import lombok.*;
 
 import java.util.List;
@@ -15,12 +14,12 @@ import java.util.List;
 public class CinemaDto implements Dto {
 
     private Long id;
-    private List<Sala> sale;
+    private List<SalaDto> sale;
     @Override
     public Cinema toModel() {
         return Cinema.builder()
                 .id(id)
-                .sale(sale)
+                .sale(sale.stream().map(SalaDto::toModel).toList())
                 .build();
     }
 }
